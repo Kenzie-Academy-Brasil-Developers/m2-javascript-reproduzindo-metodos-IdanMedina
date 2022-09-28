@@ -65,14 +65,14 @@ function callbackReduce(acc, actualValue) {
   }
   
   function reduce(array, callback, initialValue = 0) {
-  
+    let result = 0;
     let acumulador = initialValue
     
     for(let i = 0; i < array.length; i++){
       acumulador = callback(acumulador, array[i])
     }
     
-    return acumulador
+    return acumulador += result
   }
   
    console.log(reduce(array, callbackReduce));
