@@ -43,7 +43,6 @@ function callbackFind(element) {
   }
 }
 
-
 function callbackFindTwo(element) {
   if (element > 20) {
     return true;
@@ -66,14 +65,14 @@ function callbackReduce(acc, actualValue) {
   }
   
   function reduce(array, callback, initialValue = 0) {
-    let newArray = []
+  
     let acumulador = initialValue
     
     for(let i = 0; i < array.length; i++){
       acumulador = callback(acumulador, array[i])
     }
-    newArray.push(acumulador)
-    return newArray
+    
+    return acumulador
   }
   
    console.log(reduce(array, callbackReduce));
